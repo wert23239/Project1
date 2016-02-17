@@ -6,13 +6,11 @@
  * Time: 12:33 PM
  */
 
-function present_header($title)
+function present_header()
 {
     $html = <<<HTML
 <header>
-<nav><p><a href="instructions.php">New Game</a>
-</p></nav>
-<img src="title.png" alt="tile" width="575" height="315" />
+<img src="images/title.png" alt="tile" width="600" height="100" />
 </header>
 HTML;
 
