@@ -16,7 +16,7 @@ require 'format.inc.php';
     <div class="content">
         <div class = "header"><?php echo present_header(); ?></div>
 
-        <form ...>
+        <form>
             <div class="game">
                 <div class="row">
                     <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />
@@ -84,7 +84,10 @@ require 'format.inc.php';
             </div>
         </form>
 
-        <p class = "currentPlayer">Player 1, it is your turn!</p>
+        <div class = "currentPlayer">
+            <p>Player 1, it is your turn!</p>
+        </div>
+
 
         <div class="selection">
             <div class="pipe">
@@ -100,11 +103,11 @@ require 'format.inc.php';
                 <input type="radio" name="6" value="6x6" > <br>
             </div>
             <div class="pipe">
-                <img src="images/cap-e.png" alt="cave" width="50" height="50" />
+                <img src="images/cap-s.png" alt="cave" width="50" height="50" />
                 <input type="radio" name="6" value="6x6" > <br>
             </div>
             <div class="pipe">
-                <img src="images/tee-nes.png" alt="cave" width="50" height="50" />
+                <img src="images/ninety-es.png" alt="cave" width="50" height="50" />
                 <input type="radio" name="6" value="6x6" > <br>
             </div>
         </div>
