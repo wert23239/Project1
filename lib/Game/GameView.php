@@ -35,7 +35,7 @@ class GameView
 
     /** Generate the HTML for the five pipes */
     public function presentFivePipes() {
-        $fivePipes = $this->game->getFivePipes();
+//        $fivePipes = $this->game->getFivePipes();
 
         return '<div class="pipe">
                 <img src="images/ninety-es.png" alt="cave" width="50" height="50" />
@@ -64,26 +64,70 @@ class GameView
     /** Generate the HTML for the game */
     public function presentGame() {
         return '<div class="game">
-        <div class="row">
-            <div class="cell"><img src="valve-open.png" alt="cave" width="50" height="50" /></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"><img src="gauge-top-0.png" alt="cave" width="50" height="50" /></div>
-        </div>
-        <div class="row">
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"><img src="gauge-0.png" alt="cave" width="50" height="50" /></div>
-        </div>
-        <div class="row">
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        </div>
-        <div class="row">
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"><img src="gauge-top-0.png" alt="cave" width="50" height="50" /></div>
-        </div>
-        <div class="row">
-            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"><img src="gauge-0.png" alt="cave" width="50" height="50" /></div>
-        </div>
-        <div class="row">
-            <div class="cell"><img src="valve-open.png" alt="cave" width="50" height="50" /></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
-        </div>
-
-    </div>';
+                <div class="row">
+                    <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/ninety-sw.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/gauge-top-0.png" alt="cave" width="50" height="50" /></div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                    </div><div class="cell"><img src="images/ninety-ne.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/gauge-0.png" alt="cave" width="50" height="50" /></div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell"></div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/cap-s.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/leak-s.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/gauge-top-0.png" alt="cave" width="50" height="50" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/tee-nes.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/tee-wne.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/leak-w.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell">
+                    </div><div class="cell"><img src="images/gauge-0.png" alt="cave" width="50" height="50" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell"><img src="images/ninety-wn.png" alt="cave" width="50" height="50" />
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div><div class="cell">
+                    </div>
+                </div>
+            </div>';
     }
 
     /** Generate the HTML for the game */

@@ -30,7 +30,7 @@ require 'format.inc.php';
 
         <form class = "size">
             <p>Select a grid size:</p>
-            <input type="radio" name="6" value="6x6" checked> 6x6<br>
+            <input type="radio" name="6" value="6x6" checked>6x6<br>
             <input type="radio" name="10" value="10x10"> 10x10<br>
             <input type="radio" name="20" value="20x20"> 20x20
         </form>
