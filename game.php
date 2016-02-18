@@ -1,7 +1,7 @@
 <?php
 require 'format.inc.php';
-
-
+//require 'lib/game.inc.php'
+//$view = new Game\GameView($game);
 ?>
 
 <!DOCTYPE html>
