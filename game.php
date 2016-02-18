@@ -1,7 +1,7 @@
 <?php
 require 'format.inc.php';
-//require 'lib/game.inc.php'
-//$view = new Game\GameView($game);
+require 'lib/game.inc.php';
+$view = new Game\GameView($game);
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +85,9 @@ require 'format.inc.php';
         </form>
 
         <div class = "currentPlayer">
-            <p>Player 1, it is your turn!</p>
+            <?php
+            echo $view->presentTurn();
+            ?>
         </div>
 
 
