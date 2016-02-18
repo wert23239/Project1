@@ -46,10 +46,13 @@ button.start {
     font-size: 1.25em;
 }
 
+h2 {
+    font-size: 1.75em;
+}
+
 div.instructions {
     text-align: justify;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin: 1em 2em 2em 2em;
 }
 
 div.instructions p {
@@ -58,6 +61,27 @@ div.instructions p {
 
 }
 
+div.winner {
+    font-size: 1.75em;
+    margin: .75em 0 1em 0;
+}
+
+p.currentPlayer{
+    font-size: 1.5em;
+    margin: .75em 0 1em 0;
+}
+
+div.pipe {
+    padding: 0 .25em 0 .25em;
+}
+
+div.choice{
+    padding: 1.5em 0 0em 0;
+}
+
+div.button{
+    padding: 0 1.5em 0 1.5em;
+}
 
 div.game {
     display: inline-block;
