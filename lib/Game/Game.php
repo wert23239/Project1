@@ -12,12 +12,13 @@ namespace Game;
 class Game
 {
     const NUM_Squares = 16;
+    const NAME = "David";
 
     /**
      * Constructor
      * @param $seed Random number seed
      */
-    public function __construct($seed = null, $size=16) {
+    public function __construct($seed = null, $size=6) {
         if($seed === null) {
             $seed = time();
         }
@@ -56,8 +57,8 @@ class Game
         $this->turnnum++;
     }
 
-    private $size = 16;   // The rooms
-    private $currentPlayer = David;    // Room the user is in
+    private $size = 6;   // The rooms
+    private $currentPlayer = SELF::NAME;    // Room the user is in
     private $turnnum = 1;   // We were carried by birds
     //private $arrows = self::NUM_ARROWS; // Number of arrows we have
 

@@ -19,18 +19,8 @@ class GameView
 
     /** Generate the HTML for whose turn it is */
     public function presentTurn() {
-//        $turn = $this->game->getTurn();
-//
-//        if ($turn == 1)
-//        {
-//            $name = $this->game->getPlayer1Name();
-//        }
-//        else
-//        {
-//            $name = $this->game->getPlayer2Name();
-//        }
-//        return "<p>$name, is it your turn!.</p>";
-        return"<p>Player 1, it is your turn!</p>";
+        $player = $this->game->getCurrentPlayer();
+        return"<p>$player, it is your turn!</p>";
     }
 
     /** Generate the HTML for the five pipes */
@@ -63,6 +53,19 @@ class GameView
 
     /** Generate the HTML for the game */
     public function presentGame() {
+        $size = $this->game->getSize();
+        if ($size == 6)
+        {
+
+        }
+        else if ($size == 10)
+        {
+
+        }
+        else if ($size == 20)
+        {
+
+        }
         return '<div class="game">
                 <div class="row">
                     <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />

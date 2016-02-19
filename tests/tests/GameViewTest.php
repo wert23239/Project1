@@ -91,10 +91,11 @@ class GameViewTest extends \PHPUnit_Framework_TestCase
 //		$game = new Game\Game(self::SEED);
 		$game = new Game\Game();
 		$view = new Game\GameView($game);
+        $name = $game->getCurrentPlayer();
 
 		$presTurn = $view->presentTurn();
 
-		$this->assertContains('<p>Player 1, it is your turn!</p>', $presTurn);
+		$this->assertContains('<p>, it is your turn!</p>', $presTurn);
 
 	}
 
