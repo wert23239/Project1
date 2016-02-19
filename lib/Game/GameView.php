@@ -1,31 +1,78 @@
 <?php
-require 'format.inc.php';
 
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="project1check.css" type="text/css" rel="stylesheet" />
-    <title>Steampunked | Winner</title>
-</head>
-<body>
+namespace Game;
 
-    <div class = "content">
-        <div class = "header"><?php echo present_header(); ?></div>
 
-        <form>
-            <div class="game">
+class GameView
+{
+    private $game; // Game object
+
+    /**
+     * Constructor
+     * @param Game $game The Game object
+     */
+    public function __construct(Game $game) {
+        $this->game = $game;
+    }
+
+
+    /** Generate the HTML for whose turn it is */
+    public function presentTurn() {
+//        $turn = $this->game->getTurn();
+//
+//        if ($turn == 1)
+//        {
+//            $name = $this->game->getPlayer1Name();
+//        }
+//        else
+//        {
+//            $name = $this->game->getPlayer2Name();
+//        }
+//        return "<p>$name, is it your turn!.</p>";
+        return"<p>Player 1, it is your turn!</p>";
+    }
+
+    /** Generate the HTML for the five pipes */
+    public function presentFivePipes() {
+//        $fivePipes = $this->game->getFivePipes();
+
+        return '<div class="pipe">
+                <img src="images/ninety-es.png" alt="cave" width="50" height="50" />
+                <input type="radio" name="6" value="6x6" checked> <br>
+            </div>
+            <div class="pipe">
+                <img src="images/straight-h.png" alt="cave" width="50" height="50" />
+                <input type="radio" name="6" value="6x6" > <br>
+            </div>
+            <div class="pipe">
+                <img src="images/tee-esw.png" alt="cave" width="50" height="50" />
+                <input type="radio" name="6" value="6x6" > <br>
+            </div>
+            <div class="pipe">
+                <img src="images/cap-s.png" alt="cave" width="50" height="50" />
+                <input type="radio" name="6" value="6x6" > <br>
+            </div>
+            <div class="pipe">
+                <img src="images/ninety-es.png" alt="cave" width="50" height="50" />
+                <input type="radio" name="6" value="6x6" > <br>
+            </div>';
+
+
+    }
+
+    /** Generate the HTML for the game */
+    public function presentGame() {
+        return '<div class="game">
                 <div class="row">
-                    <div class="cell"><img src="images/valve-open.png" alt="cave" width="50" height="50" />
+                    <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />
                     </div><div class="cell"><img src="images/ninety-sw.png" alt="cave" width="50" height="50" />
                     </div><div class="cell">
                     </div><div class="cell">
                     </div><div class="cell">
                     </div><div class="cell">
                     </div><div class="cell">
-                    </div><div class="cell"><img src="images/gauge-top-190.png" alt="cave" width="50" height="50" /></div>
+                    </div><div class="cell"><img src="images/gauge-top-0.png" alt="cave" width="50" height="50" /></div>
                 </div>
                 <div class="row">
                     <div class="cell">
@@ -35,7 +82,7 @@ require 'format.inc.php';
                     </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
                     </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
                     </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
-                    </div><div class="cell"><img src="images/gauge-190.png" alt="cave" width="50" height="50" /></div>
+                    </div><div class="cell"><img src="images/gauge-0.png" alt="cave" width="50" height="50" /></div>
                 </div>
                 <div class="row">
                     <div class="cell">
@@ -70,7 +117,7 @@ require 'format.inc.php';
                     </div>
                 </div>
                 <div class="row">
-                    <div class="cell"><img src="images/valve-open.png" alt="cave" width="50" height="50" />
+                    <div class="cell"><img src="images/valve-closed.png" alt="cave" width="50" height="50" />
                     </div><div class="cell"><img src="images/straight-h.png" alt="cave" width="50" height="50" />
                     </div><div class="cell"><img src="images/ninety-wn.png" alt="cave" width="50" height="50" />
                     </div><div class="cell">
@@ -80,24 +127,28 @@ require 'format.inc.php';
                     </div><div class="cell">
                     </div>
                 </div>
+            </div>';
+    }
+
+    /** Generate the HTML for the game */
+    public function presentButtons()
+    {
+
+        return'<div class="button">
+                <button type="button">Rotate</button>
             </div>
-        </form>
+            <div class="button">
+                <button type="button">Discard</button>
+            </div>
+            <div class="button">
+                <button type="button">Open Valve</button>
+            </div>
+            <div class="button">
+                <button type="button">Give Up</button>
+            </div>';
 
-
-        <div class = "winner">
-            <p class = "win">Player 1 Wins!</p>
-            <p class = "lose">Player 2 Loses!</p>
-        </div>
-
-
-        <button class = "start" type="button">New Game</button>
-
-
-    </div>
-
+    }
 
 
 
-
-</body>
-</html>
+}

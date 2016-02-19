@@ -1,6 +1,5 @@
 {
   "autoload": {
-    "psr-4": {"Pipes\\": "lib/Pipes"}
+    "psr-4": {"Game\\": "lib/Game"}
   }
 }
-

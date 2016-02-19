@@ -4,11 +4,13 @@ require __DIR__ . "/../vendor/autoload.php";
 // Start the PHP session system
 session_start();
 
-define("PIPES_SESSION", 'pipes');
+define("GAME_SESSION", 'game');
 
-// If there is a Wumpus session, use that. Otherwise, create one
-if(!isset($_SESSION[PIPES_SESSION])) {
-    $_SESSION[PIPES_SESSION] = new Pipes\Pipes();   // Seed: 1422668587
+// If there is a Game session, use that. Otherwise, create one
+if(!isset($_SESSION[GAME_SESSION])) {
+    $_SESSION[GAME_SESSION] = new Game\Game();   // Seed: 1422668587???
 }
 
-$pipes = $_SESSION[PIPES_SESSION];
+
+
+$game = $_SESSION[GAME_SESSION];
