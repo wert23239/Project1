@@ -6,10 +6,10 @@
  * Time: 4:43 PM
  */
 
-namespace Pipes;
+namespace Game;
 
 
-class Pipes
+class Game
 {
     const NUM_Squares = 16;
 
